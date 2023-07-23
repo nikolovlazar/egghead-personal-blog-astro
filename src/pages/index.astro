@@ -1,15 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+import '../styles/index.css';
+
+const isRed = false;
+const foreground = 'red';
+const background = 'lavender';
 ---
 
 <Layout title='Welcome to Astro.'>
   <main>
-    <h1>
+    <h1 class:list={['box', { red: isRed }]}>
       Welcome to <span class='text-gradient'>Building a blog with Astro</span> course
       on Egghead.io!
     </h1>
-    <p class='instructions'>
+    <p
+      class='instructions italic text-right leading-loose'
+      style={{ fontWeight: 'bold' }}
+    >
       To get started, open the directory <code>src/pages</code> in your project.<br
       />
       <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -39,16 +48,24 @@ import Card from '../components/Card.astro';
   </main>
 </Layout>
 
-<style>
+<style define:vars={{ foreground, background }}>
+  .box {
+    border: 1px solid blue;
+  }
+  .red {
+    border-color: red;
+  }
   main {
     margin: auto;
     padding: 1.5rem;
     max-width: 60ch;
   }
-  h1 {
+  :global(h1) {
     font-size: 3rem;
     font-weight: 800;
     margin: 0;
+    color: var(--foreground);
+    background: var(--background);
   }
   .text-gradient {
     background-image: var(--accent-gradient);
