@@ -1,4 +1,6 @@
 ---
+import Link from '../components/Link.astro';
+
 interface Props {
   title: string;
   description: string;
@@ -26,11 +28,13 @@ const { title } = Astro.props;
       </header>
       <nav>
         <ul class='flex gap-4'>
-          <li><a href='/'>Home</a></li>
-          <li><a href='/about'>About</a></li>
-          <li><a href='/blog'>Blog</a></li>
+          <li><Link href='/'>Home</Link></li>
+          <li><Link href='/about'>About</Link></li>
+          <li><Link href='/blog'>Blog</Link></li>
           <li>
-            <a href='https://github.com/nikolovlazar'> GitHub</a>
+            <Link href='https://github.com/nikolovlazar' isExternal>
+              GitHub
+            </Link>
           </li>
         </ul>
       </nav>
