@@ -9,7 +9,7 @@ export type Props = {
 const { posts } = Astro.props;
 ---
 
-<ul class='mt-4 px-10 space-y-2 list-decimal'>
+<ol class='mt-4 px-10 space-y-2 list-decimal'>
   {
     posts.map((post) => (
       <li>
@@ -22,4 +22,4 @@ const { posts } = Astro.props;
       </li>
     ))
   }
-</ul>
+</ol>
