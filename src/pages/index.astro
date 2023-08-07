@@ -19,7 +19,7 @@ const posts = await getCollection('blog');
   </div>
   <div class='flex flex-col'>
     <h2 class='text-2xl font-semibold'>Recent blog posts:</h2>
-    <ul class='mt-4 px-10 space-y-2 list-decimal'>
+    <ol class='mt-4 px-10 space-y-2 list-decimal'>
       {
         posts.map((post) => (
           <li>
@@ -32,6 +32,6 @@ const posts = await getCollection('blog');
           </li>
         ))
       }
-    </ul>
+    </ol>
   </div>
 </Layout>
