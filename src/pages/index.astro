@@ -1,7 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
+
+import Link from '../components/Link.astro';
 import Layout from '../layouts/Layout.astro';
 
 import '../styles/index.css';
+
+const posts = await getCollection('blog');
 ---
 
 <Layout title='Welcome to Astro.' description=''>
@@ -11,5 +16,22 @@ import '../styles/index.css';
       I'm a Developer Advocate and Software Engineer. I like writing code and
       mentoring.
     </p>
+  </div>
+  <div class='flex flex-col'>
+    <h2 class='text-2xl font-semibold'>Recent blog posts:</h2>
+    <ul class='mt-4 px-10 space-y-2 list-decimal'>
+      {
+        posts.map((post) => (
+          <li>
+            <Link class='flex justify-between' href={`/blog/${post.slug}`}>
+              {post.data.title}
+              <span class='text-gray-400'>
+                {post.data.date.toUTCString().slice(0, -13)}
+              </span>
+            </Link>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </Layout>
