@@ -1,8 +1,18 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from '../layouts/Layout.astro';
+import lazarsPhoto from '../assets/lazar.jpg';
 ---
 
 <Layout title='About' description=''>
+  <Image
+    src={lazarsPhoto}
+    alt='A photo of Lazar Nikolov'
+    width={512}
+    quality='max'
+    class='rounded-full'
+  />
   <p>
     Hey, I&apos;m <b>Lazar Nikolov</b>. I live in Toronto, Canada, but
     originally I&apos;m from North Macedonia. As a fullstack engineer, I enjoy
