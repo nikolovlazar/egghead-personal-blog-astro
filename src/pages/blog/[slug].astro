@@ -19,4 +19,4 @@ const post: CollectionEntry<'blog'> = Astro.props.post;
 const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title} description='' />
+<Layout title={post.data.title} />
