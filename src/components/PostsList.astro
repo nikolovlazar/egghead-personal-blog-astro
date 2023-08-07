@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Link from './Link.astro';
+
+export type Props = {
+  posts: CollectionEntry<'blog'>[];
+};
+
+const { posts } = Astro.props;
+---
+
+<ul class='mt-4 px-10 space-y-2 list-decimal'>
+  {
+    posts.map((post) => (
+      <li>
+        <Link class='flex justify-between' href={`/blog/${post.slug}`}>
+          {post.data.title}
+          <span class='text-gray-400'>
+            {post.data.date.toUTCString().slice(0, -13)}
+          </span>
+        </Link>
+      </li>
+    ))
+  }
+</ul>

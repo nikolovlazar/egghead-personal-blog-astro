@@ -1,1 +1,13 @@
-<h1>Index, blog!</h1>
+---
+import { getCollection } from 'astro:content';
+
+import Layout from '../../layouts/Layout.astro';
+import PostsList from '../../components/PostsList.astro';
+
+const posts = await getCollection('blog');
+---
+
+<Layout title='Blog posts'>
+  <h1 class='text-heading-1 mt-8'>Blog posts</h1>
+  <PostsList posts={posts} />
+</Layout>
