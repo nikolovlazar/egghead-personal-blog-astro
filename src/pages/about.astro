@@ -6,19 +6,21 @@ import lazarsPhoto from '../assets/lazar.jpg';
 ---
 
 <Layout title='About' description=''>
-  <Image
-    src={lazarsPhoto}
-    alt='A photo of Lazar Nikolov'
-    width={512}
-    quality='max'
-    class='rounded-full'
-  />
-  <p>
-    Hey, I&apos;m <b>Lazar Nikolov</b>. I live in Toronto, Canada, but
-    originally I&apos;m from North Macedonia. As a fullstack engineer, I enjoy
-    building interesting pet projects from scratch. Of course, just like any
-    developer, I end up abandoning them. I&apos;m a super curious fellow and
-    I&apos;m always up to learn something new. Aside from learning new things, I
-    enjoy live streaming on Twitch and creating courses for egghead.io.
-  </p>
+  <div class='flex flex-col items-center gap-8 mx-auto mt-12'>
+    <Image
+      src={lazarsPhoto}
+      alt='A photo of Lazar Nikolov'
+      width={512}
+      quality='max'
+      class='w-64 rounded-full'
+    />
+    <p class='mt-2 flex-1 leading-7'>
+      Hey, I&apos;m <b>Lazar Nikolov</b>. I live in Toronto, Canada, but
+      originally I&apos;m from North Macedonia. As a fullstack engineer, I enjoy
+      building interesting pet projects from scratch. Of course, just like any
+      developer, I end up abandoning them. I&apos;m a super curious fellow and
+      I&apos;m always up to learn something new. Aside from learning new things,
+      I enjoy live streaming on Twitch and creating courses for egghead.io.
+    </p>
+  </div>
 </Layout>

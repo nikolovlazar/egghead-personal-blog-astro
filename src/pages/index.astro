@@ -2,79 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 
 import '../styles/index.css';
-
-const isRed = false;
-const foreground = 'red';
-const background = 'lavender';
 ---
 
 <Layout title='Welcome to Astro.' description=''>
-  <main>
-    <h1 class:list={['box', { red: isRed }]}>
-      Welcome to <span class='text-gradient'>Building a blog with Astro</span> course
-      on Egghead.io!
-    </h1>
-    <a href='/about'>About</a>
-    <p
-      class='instructions italic text-right leading-loose'
-      style={{ fontWeight: 'bold' }}
-    >
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+  <div class='h-64 flex flex-col justify-center items-start'>
+    <h1 class='text-heading-1'>Hello, I'm Lazar Nikolov.</h1>
+    <p class='mt-2'>
+      I'm a Developer Advocate and Software Engineer. I like writing code and
+      mentoring.
     </p>
-  </main>
+  </div>
 </Layout>
-
-<style define:vars={{ foreground, background }}>
-  .box {
-    border: 1px solid blue;
-  }
-  .red {
-    border-color: red;
-  }
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  :global(h1) {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-    color: var(--foreground);
-    background: var(--background);
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>
