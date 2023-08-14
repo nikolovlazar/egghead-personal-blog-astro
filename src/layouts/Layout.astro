@@ -1,13 +1,15 @@
 ---
+import { SEO, type Props as SEOProps } from 'astro-seo';
+
 import Link from '../components/Link.astro';
 
 import '../styles/index.css';
 
 interface Props {
-  title: string;
+  seo?: SEOProps;
 }
 
-const { title } = Astro.props;
+const { seo } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -18,7 +20,11 @@ const { title } = Astro.props;
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
-    <title>{title}</title>
+    <SEO
+      {...seo}
+      title={seo?.title ?? 'Lazar Nikolov'}
+      description={seo?.description ?? "Lazar Nikolov's personal blog site"}
+    />
   </head>
   <body class='w-full max-w-3xl mx-auto min-h-screen flex flex-col'>
     <div class='flex justify-between items-center py-4'>
@@ -46,24 +52,24 @@ const { title } = Astro.props;
     <footer class='w-full mx-auto text-center py-4'>
       <span>© {new Date().getFullYear()} Lazar Nikolov.</span>
     </footer>
+    <style is:global>
+      :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+      }
+      html {
+        font-family: system-ui, sans-serif;
+        background-color: #f6f6f6;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-</style>

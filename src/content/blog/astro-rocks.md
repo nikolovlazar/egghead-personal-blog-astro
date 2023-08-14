@@ -2,6 +2,7 @@
 title: Astro rocks!
 tags: ['hello', 'world']
 date: 2023-08-07
+description: 'Astro is the best framework for building Jamstack websites!'
 ---
 
 Astro is a seriously cool framework!
