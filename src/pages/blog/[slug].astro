@@ -2,6 +2,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 import Layout from '../../layouts/Layout.astro';
+import PostLike from '../../components/PostLike';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -23,4 +24,5 @@ const { Content } = await post.render();
   <article class='prose max-w-[80ch] mx-auto mt-12'>
     <Content />
   </article>
+  <PostLike client:visible />
 </Layout>
