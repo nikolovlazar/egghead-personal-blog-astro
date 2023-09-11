@@ -7,9 +7,9 @@ run npm install
 run npm run build
 
 env HOST=0.0.0.0
-env PORT=3000
+env PORT=4321
 env MODE=production
 
-expose 3000
+expose 4321
 
 cmd npm run start
