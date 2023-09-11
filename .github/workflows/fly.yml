@@ -1,0 +1,26 @@
+name: Fly Deploy
+
+on:
+  push:
+    branches: main
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy blog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo using Git
+        uses: actions/checkout@v3
+      - name: Setup node 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Setup flyctl
+        uses: superfly/flyctl-actions/setup-flyctl@master
+      - name: Run deploy script
+        run: flyctl deploy --remote-only
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
