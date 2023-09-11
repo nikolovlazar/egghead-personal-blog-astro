@@ -37,9 +37,6 @@ export default defineConfig({
       },
     }),
   ],
-  experimental: {
-    assets: true,
-  },
   output: 'hybrid',
   adapter: node({
     mode: 'standalone',
