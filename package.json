@@ -7,7 +7,9 @@
     "start": "node ./dist/server/entry.mjs",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "db:generate": "drizzle-kit generate:sqlite",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@astrojs/node": "^6.0.0",
@@ -16,6 +18,8 @@
     "@astrojs/tailwind": "^5.0.0",
     "astro": "^3.0.12",
     "astro-seo": "^0.7.5",
+    "better-sqlite3": "^8.6.0",
+    "drizzle-orm": "^0.28.6",
     "markdown-it": "^13.0.1",
     "sanitize-html": "^2.11.0",
     "tailwindcss": "^3.3.3"
@@ -23,7 +27,9 @@
   "devDependencies": {
     "@flydotio/dockerfile": "^0.4.5",
     "@tailwindcss/typography": "^0.5.9",
+    "@types/better-sqlite3": "^7.6.4",
     "@types/markdown-it": "^13.0.0",
-    "@types/sanitize-html": "^2.9.0"
+    "@types/sanitize-html": "^2.9.0",
+    "drizzle-kit": "^0.19.13"
   }
 }
