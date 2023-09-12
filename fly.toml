@@ -18,4 +18,4 @@ primary_region = "yyz"
 
 [mounts]
   source="db"
-  destionation="/mnt/db"
+  destination="/mnt/db"
