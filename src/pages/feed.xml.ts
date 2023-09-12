@@ -6,7 +6,7 @@ import MarkdownIt from 'markdown-it';
 
 const parser = new MarkdownIt();
 
-export async function get(context: APIContext) {
+export async function GET(context: APIContext) {
   const blog = await getCollection('blog');
 
   return rss({
