@@ -36,4 +36,21 @@ const { slug } = Astro.props;
         alert("Couldn't like the post");
       });
   }
+
+  function refreshLikes() {
+    fetch(`/api/likes/${slug}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (!!numLikes) {
+          numLikes.innerText = data.likes;
+        }
+      })
+      .catch(() => {
+        if (!!numLikes) {
+          numLikes.innerText = '0'
+        }
+      });
+  }
+
+  refreshLikes();
 </script>
