@@ -7,9 +7,14 @@ import '../styles/index.css';
 
 interface Props {
   seo?: SEOProps;
+  ogImage?: {
+    template: string;
+  }
 }
 
-const { seo } = Astro.props;
+const { seo, ogImage } = Astro.props;
+
+const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png`;
 ---
 
 <!DOCTYPE html>
@@ -25,6 +30,18 @@ const { seo } = Astro.props;
       {...seo}
       title={seo?.title ?? 'Lazar Nikolov'}
       description={seo?.description ?? "Lazar Nikolov's personal blog site"}
+      openGraph={{
+        basic: {
+          type: 'website',
+          title: seo?.title ?? "Lazar Nikolov's personal blog site",
+          image: ogImageUrl,
+          url: seo?.canonical,
+        },
+      }}
+      twitter={{
+        card: 'summary_large_image',
+        image: ogImageUrl,
+      }}
     />
   </head>
   <body class='w-full max-w-3xl mx-auto min-h-screen flex flex-col'>

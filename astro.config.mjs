@@ -41,4 +41,9 @@ export default defineConfig({
   adapter: node({
     mode: 'standalone',
   }),
+  vite: {
+    optimizeDeps: {
+      exclude: ['@resvg/resvg-js'],
+    },
+  },
 });
