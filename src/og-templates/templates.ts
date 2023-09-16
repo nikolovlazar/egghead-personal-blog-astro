@@ -5,4 +5,8 @@ export const templates: Record<string, (data?: Record<string, any>) => any> = {
     <h1>Lazar Nikolov</h1>
     <p>Software Engineer, Content Creator</p>
   </div>`,
+  blog: (data) => html`<div tw="flex items-center justify-between p-24">
+    <h1>${data?.title}</h1>
+    <p>Software Engineer, Content Creator</p>
+  </div>`,
 };

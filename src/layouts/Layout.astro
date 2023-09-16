@@ -9,12 +9,13 @@ interface Props {
   seo?: SEOProps;
   ogImage?: {
     template: string;
+    data?: Record<string, any>;
   }
 }
 
 const { seo, ogImage } = Astro.props;
 
-const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png`;
+const ogImageUrl = `${Astro.url.origin}/og/${ogImage?.template ?? 'default'}.png?${new URLSearchParams(ogImage?.data)}`;
 ---
 
 <!DOCTYPE html>

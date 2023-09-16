@@ -21,7 +21,10 @@ export async function GET(context: APIContext) {
     return new Response('Template not found', { status: 404 });
   }
 
-  const svg = await satori(templateFn(), {
+  const { searchParams } = new URL(context.request.url);
+  const data = Object.fromEntries(searchParams.entries());
+
+  const svg = await satori(templateFn(data), {
     width: 1200,
     height: 630,
     fonts: [
