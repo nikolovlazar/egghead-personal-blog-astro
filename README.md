@@ -1,9 +1,8 @@
-# Build a Personal Blog with a Delightful Developer Experience using Astro
+# Build a Full Stack Blog with Astro
 
 ## 👋 Welcome
 
-Welcome to the "Build a Personal Blog with Delightful Developer Experience using
-Astro" course! 👌
+Welcome to the "Build a Full Stack Blog with Astro" course! 👌
 
 In this course we're going to learn Astro by building a fully functional
 personal blog which we can actually use as our personal developer portfolio at
@@ -59,8 +58,8 @@ If you haven't worked with TypeScript before, that's another skill that you'll
 learn and also apply in other frameworks and technologies.
 
 You'll also learn how SEO, sitemaps and RSS feeds work, how to generate dynamic
-OG images, and how to use Docker to dockerize websites and deploy them on any
-cloud platform that supports containers.
+OG images, how to use Docker to dockerize websites and deploy them on any
+cloud platform that supports containers, and how to setup DrizzleORM with an SQLite database.
 
 These are all generic skills that you can apply in other frameworks aside from
 Astro.
@@ -88,22 +87,21 @@ the local development server.
 
 ## 🔢 Lessons list
 
-- `Lesson 01` - a talking-head lesson that gives an intro to this course
-- `Lesson 02` - creating a project and setting up the development environment
-- `Lesson 03` - exploring different ways to apply styles to your website
-- `Lesson 04` - learning how routing works by creating static pages
-- `Lesson 05` - creating a shared layout used by all of the pages
-- `Lesson 06` - learning what Astro components are
-- `Lesson 07` - serving static assets
-- `Lesson 08` - creating a "Blog" content collection and using the Content
-  Collections API to list all blog posts
-- `Lesson 09` - rendering the content for every blog post
-- `Lesson 10` - implementing pagination to the blog index page
-- `Lesson 11` - implementing an SEO mechanism
-- `Lesson 12` - generating a sitemap
-- `Lesson 13` - generating an RSS feed
-- `Lesson 14` - deploying on Vercel
-- `Lesson 15` - a milestone recap lesson
+- `Lesson 01` - Intro: Build a Full Stack Blog with Astro
+- `Lesson 02` - Create an Astro Project and Set up the Dev Environment
+- `Lesson 03` - Style Astro Pages with Many Different Options
+- `Lesson 04` - Create an Astro Component for Links
+- `Lesson 05` - Render Images to Pages with Astros Static Serving and Static Assets
+- `Lesson 06` - Create Astro Content Collections with Zod for a Typesafe Blog
+- `Lesson 07` - Render an Astro Blog Post Page with getStaticPaths
+- `Lesson 08` - Implement Pagination in a Dynamic Astro Index Page with getStaticPaths and paginate
+- `Lesson 09` - Create Static Pages in Astro Using File Based Routing
+- `Lesson 10` - Create and Apply a Layout to Astro Pages
+- `Lesson 11` - Implement SEO in an Astro Website with astro-seo
+- `Lesson 12` - Generate a Sitemap in Astro with the sitemap Integration
+- `Lesson 13` - Generate an RSS Feed for an Astro Blog with @astrojs/rss
+- `Lesson 14` - Deploy a Static Astro Site on Vercel
+- `Lesson 15` - Milestone Recap: Build a Full Stack Blog with Astro
 - `Lesson 16` - understanding the Astro Islands Architecture through creating a
   React component
 - `Lesson 17` - refactoring the React component into vanilla JS
