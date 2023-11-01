@@ -102,15 +102,14 @@ the local development server.
 - `Lesson 13` - Generate an RSS Feed for an Astro Blog with @astrojs/rss
 - `Lesson 14` - Deploy a Static Astro Site on Vercel
 - `Lesson 15` - Milestone Recap: Build a Full Stack Blog with Astro
-- `Lesson 16` - understanding the Astro Islands Architecture through creating a
-  React component
-- `Lesson 17` - refactoring the React component into vanilla JS
-- `Lesson 18` - preparing the fly.io account for deployment
-- `Lesson 19` - dockerizing the blog
-- `Lesson 20` - creating an auto-deployment GitHub Action
-- `Lesson 21` - implementing Drizzle ORM
-- `Lesson 22` - implementing a custom API endpoint
-- `Lesson 23` - implementing a dynamic OG image generation mechanism
+- `Lesson 16` - Add Interactive React Components to a Static Astro Page with Astro Islands
+- `Lesson 17` - Refactor a React Astro Island to Vanilla JS to Ship Less JavaScript
+- `Lesson 18` - Create a fly.io Account and Prepare a Project for Deployment
+- `Lesson 19` - Dockerize a Server-side Rendered (SSR) Astro Blog and Deploy to Fly.io
+- `Lesson 20` - Create a GitHub Action Configuration to Automatic Deploy an Astro Blog
+- `Lesson 21` - Implement Drizzle ORM for Development and Deploy to a Fly.io Volume
+- `Lesson 22` - Create Astro API Endpoints to Get and Update Database Records using Drizzle ORM
+- `Lesson 23` - Implement Dynamic OG Image Generation with Astro API Routes and Satori
 
 ## ❤️ Contributors
 
