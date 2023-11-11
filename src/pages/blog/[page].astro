@@ -12,7 +12,18 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   return paginate(posts, { pageSize: 3 });
 };
 
-const page: Page<CollectionEntry<'blog'>> = Astro.props.page;
+// In Lesson 10 I'm setting the page's type by directly assigning it
+// (const page: Page<CollectionEntry<'blog'>> = ...)
+// That won't work in recent versions of Astro because if we don't define
+// `type Props`, Astro.props will be a record of type `Record<string, unknown>`
+// and we can't cast an `unknown` to the `Page` type.
+// To fix this, we need to define `type Props` and set the page type in it,
+// instead of casting the `page` constant to it.
+type Props = {
+  page: Page<CollectionEntry<'blog'>>;
+};
+
+const page = Astro.props.page;
 ---
 
 <Layout seo={{ title: 'Blog posts' }}>
