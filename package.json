@@ -12,11 +12,11 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@astrojs/node": "^6.0.0",
-    "@astrojs/rss": "^2.4.4",
+    "@astrojs/node": "^8.3.1",
+    "@astrojs/rss": "^4.0.6",
     "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.0.12",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.10.3",
     "astro-seo": "^0.7.5",
     "better-sqlite3": "^8.6.0",
     "drizzle-orm": "^0.28.6",
